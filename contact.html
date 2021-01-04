@@ -2,75 +2,116 @@
 <!--
 Created by: Eric Redlak
 Date:12/29/2020
-Most recent revision:
-
+Most recent revision:1/4/2021
 -->
 
 <html lang="en">
 	<head>
-		<title>Simmer Down - Contact Us</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Simmer Down - Contact</title>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>		
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />					
+		<script type="text/JavaScript" src="js/contact.js"></script>
+
+		<style>
+			label {
+				font-weight:bold;
+			}
+		</style>
 	</head>
 	
 
 
 	<body>
-		<header>
-			Contact Us <!-- is there any way to make this a variable?-->
-			<hr/>
-			<h1 style="text-align:center">Simmer Down</h1>
-		</header>
-		<nav style="text-align:center">
-			<hr/>
-			<a href="index.html">Home</a>
-			<a href="menu.html">Menu</a>
-			<a href="contact.html">Contact Us</a>
-			<hr/>
-		</nav>
+		<br>
+		<div class="container">
+			<header class="jumbotron">
+				<h1>Simmer Down</h1>
+				<h6>We've been so busy we're boiling over!<br>Opening soon:<br>224 River Bend, Savannah, GA 31404</h6>			
+			</header>
+			<nav>
+				<!--Is there any way to force an SVG to have a different color?-->
+				<a href="index.html" class="btn btn-pill btn-secondary"><img src="open-iconic-master/svg/home.svg" alt="Home" id="homeIcon"></a>
+				<a href="menu.html" class="btn btn-pill btn-secondary">Menu</a>
+				<a href="contact.html" class="btn btn-pill btn-secondary">Contact Us</a>
+			</nav>
 
-		<section style="text-align:center">
-		<!-- This section element contains the form-->
-			<form action="submit.html" method="POST">
-				<label for="name">Name:</label>
-				<input type="text" id="name" name="name"> <br /><br />
-				<label for="email">Email:</label>
-				<input type="text" id="email" name="email"> <br /><br />
-				<label for="phone">Phone:</label>
-				<input type="text" id="phone" name="phone"> <br /><br />
-				<label for="reason">Reason for Inquiry:</label>
-				<select id="reason" name="reason">
-					<option value="catering" selected>Catering</option>
-					<option value="privateParty">Private Party</option>
-					<option value="feedback">Feedback</option>
-					<option value="other">Other</option>
-				</select>
-				</br></br>
-				<label for="info">Additional Information:</label>
-				<textarea id="info" name="info"></textarea>
-				</br></br>
-				<legend>Have you been to the restaurant?</legend>
-					<input type="radio" id="choice1" name="questionnaire" value="no">
-					<label for="choice1">No</label>
-					<input type="radio" id="choice2" name="questionnaire" value="yes">
-					<label for="choice2">Yes</label>
-				</br></br>
-				<legend>Best days to contact you:</legend>
-					<input type="checkbox" id="M" name="day" value="M">
-					<label for="M">M</label>
-					<input type="checkbox" id="T" name="day" value="T">
-					<label for="T">T</label>
-					<input type="checkbox" id="W" name="day" value="W">
-					<label for="W">W</label>
-					<input type="checkbox" id="Th" name="day" value="Th">
-					<label for="Th">Th</label>
-					<input type="checkbox" id="F" name="day" value="F">
-					<label for="F">F</label>
-		</section>
+			<section id="information">
+			<!-- This section element contains the form-->
+			<br>
+			<h3>Contact Us</h3>
+			<noscript>
+				<h4 style="color:red">Javascript must be enabled to use this page.</h4>
+			</noscript>
+			<br>
+				<form inputtype="submit" method="POST" name="contactForm" onsubmit="return validateForm(document.contactForm)"><!--action="false"--> 
+					<div class="row">
+						<div class="col-lg col-md col-sm">
+							<div class="form-group">
+								<label for="name">Name:</label>
+								<input type="text" id="name" name="name"> <br /><br />
+							</div>
+							<div class="form-group">
+								<label for="email">Email:</label>
+								<input type="text" id="email" name="email"> <br /><br />
+							</div>
+							<div class="form-group">
+								<label for="phoneNumber">Phone:</label>
+								<input type="text" id="phoneNumber" name="phoneNumber"> <br /><br />
+							</div>
+							<div class="form-group">
+								<label for="reason">Reason for Inquiry:</label>
+								<select id="reason" name="reason">
+									<option value="catering" selected>Catering</option>
+									<option value="privateParty">Private Party</option>
+									<option value="feedback">Feedback</option>
+									<option value="other">Other</option>
+								</select>
+							</div>
+							</br></br>
+							<label for="info">Additional Information:</label><br>
+							<textarea id="info" name="info"></textarea>
+							<br><br>
+							<legend>Have you been to the restaurant?</legend>
+								<input type="radio" id="choice1" name="questionnaire" value="no">
+								<label for="choice1">No</label>
+								<input type="radio" id="choice2" name="questionnaire" value="yes">
+								<label for="choice2">Yes</label>
+							</br></br>
+							<legend>Best days to contact you:</legend>
+								<input type="checkbox" id="M" name="day" value="M">
+								<label for="M">M</label>
+								<input type="checkbox" id="T" name="day" value="T">
+								<label for="T">T</label>
+								<input type="checkbox" id="W" name="day" value="W">
+								<label for="W">W</label>
+								<input type="checkbox" id="Th" name="day" value="Th">
+								<label for="Th">Th</label>
+								<input type="checkbox" id="F" name="day" value="F">
+								<label for="F">F</label>
+							<br>
+							<input type="submit" name="submit" value="Submit">
+						</div>
+						
+							
+							</br></br>
+						
+					</div>
+			<br>
+			</section>
 
-		<footer style="text-align:center">
-			<hr/>	
-			<p style="text-align:center"> 789 Burnt Ends Dr, North Charleston, SC 29404
-			<p>803-674-4000</p>
-			<p>&copy; 2020 Eric Redlak. All rights reserved.</p>
-		</footer>
+			<footer>
+				<p>789 Burnt Ends Dr, North Charleston, SC 29404</p>
+				<p>803-674-4000</p>
+				<p>&copy; 2020 Eric Redlak. All rights reserved.</p>
+			</footer>
+		</div>
+		<!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script type="text/JavaScript" src="js/contact.js"></script>
 	</body>
 </html>

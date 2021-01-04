@@ -2,45 +2,81 @@
 <!--
 Created by: Eric Redlak
 Date:12/29/2020
-Most recent revision:
-
+Most recent revision:1/4/2021
 -->
 
-<html lang="en">
+<html lang="en" >
 	<head>
-		<title>Simmer Down</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Simmer Down - Home</title>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>		
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />			
+		<style>
+		</style>
 	</head>
 	
-
-
 	<body>
-		<header>
-			Home Page <!-- is there any way to make this a variable?-->
-			<hr/>
-			<h1 style="text-align:center">Simmer Down</h1>
-		</header>
-		<nav style="text-align:center">
-			<hr/>
-			<a href="index.html">Home</a>
-			<a href="menu.html">Menu</a>
-			<a href="contact.html">Contact Us</a>
-			<hr/>
-		</nav>
-
-		<section style="text-align:center">
-		<!-- This section element contains the restaurant's picture and description-->
-		<!-- the image must be 400x150-->
-			<img src="images/restaurant_400x150" alt="A picture of our coals">
-			<p>
-				Simmer Down was founded posthumously by Rodney Dangerfield in 2018. Add a longer description here to fill in stuff.
-			</p>
-		</section>
-
-		<footer style="text-align:center">
-			<hr/>	
-			<p style="text-align:center"> 789 Burnt Ends Dr, North Charleston, SC 29404
-			<p>803-674-4000</p>
-			<p>&copy; 2020 Eric Redlak. All rights reserved.</p>
-		</footer>
+		<br>
+		<div class="container">
+			<header class="jumbotron">
+				<h1>Simmer Down</h1>
+				<h6>We've been so busy we're boiling over!<br>Opening soon:<br>224 River Bend, Savannah, GA 31404</h6>			
+			</header>
+			
+			<nav>
+				<!--Is there any way to force an SVG to have a different color?-->
+				<a href="index.html" class="btn btn-pill btn-secondary"><img src="open-iconic-master/svg/home.svg" alt="Home" id="homeIcon"></a>
+				<a href="menu.html" class="btn btn-pill btn-secondary">Menu</a>
+				<a href="contact.html" class="btn btn-pill btn-secondary">Contact Us</a>
+			</nav>
+			
+		
+			<section id="information">
+			<br>
+				<div class="row"> <!--This row will contain the carousel-->
+				<h3>
+					<div class="col-lg col-med col-sm">
+						<div id="mainCarousel" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									We're opening a new location!
+								</div>
+								<div class="carousel-item">
+									We're rolling out our seasonal menu, with special options for this season!
+								</div>
+								<div class="carousel-item">
+									The Drink Of The Month is: SG Special Brew!
+								</div>
+							</div>
+						</div>
+					</div>
+				</h3>
+				</div>	
+				<div class="row"> <!--This row contains a homepage "banner"-->
+					<div class="col-lg col-med col-sm">
+						<img src="images/restaurant_400x150.jpg" alt="A picture of our coals" style="margin:10px"/>
+						<br>
+					</div>
+				</div>
+				<div class="row"> <!--This row contains a short description and welcome-->
+					<div class="col-lg col-med col-sm">
+						<p>Simmer Down was founded posthumously by Rodney Dangerfield in 2018. <br>Unbeknownst to many, Rodney was a huge fan of soup. <br>Many find it odd that there is no soup on our menu.</p>
+					</div>
+				</div>	
+				
+			<br>
+			</section>
+			<footer>
+				<p>789 Burnt Ends Dr, North Charleston, SC 29404</p>
+				<p>803-674-4000</p>
+				<p>&copy; 2020 Eric Redlak. All rights reserved.</p>
+			</footer>
+		</div>
+		<!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	</body>
 </html>

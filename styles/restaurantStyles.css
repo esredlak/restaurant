@@ -1,0 +1,91 @@
+/*
+Creator: Eric Redlak
+Date created: 1/2/2021
+Date last modified:
+*/
+
+@font-face {
+	font-family: BungeeShade;
+	src: url("../fonts/BungeeShade-Regular.ttf");
+}
+
+.clear-float {
+	clear:both;
+}
+
+.right-content {
+	float:left;
+}
+.jumbotron{
+	background-color: #462026;
+	margin-bottom: 0px;
+	padding: 2rem 2rem;
+}
+.tableHeader{
+	font-weight:bold;
+	font-size:1.3em;
+}	
+.row{
+	margin:auto;
+	justify-content: center;
+}
+#container{
+	width:70%;
+	margin:auto;
+}
+#information{
+	background-color: #FFFFFF;
+	margin:0 auto;
+}
+#homeIcon{
+	width: 16px;
+	height: 16px;
+}
+nav {
+	display:inline-block;
+}
+nav a {
+    background-color: #7E7F9A;
+    color: #FFFFFF;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+	margin: 20px;
+	width: 100px;
+	float:left;
+	white-space: nowrap;
+}
+nav a:visited {
+    color: #EDDFBF; 
+}
+nav a:hover {
+    background-color: #48485B;
+    color: #D2DBD9;
+	font-weight: bold;
+}
+body {
+	background-color: #152924;
+	text-align: center;
+	margin: 0 auto;
+}
+header,footer {
+	background-color: #462026;
+	color: #D2DBD9;
+	text-align: center;
+	vertical-align: center;
+}
+header {
+	padding: 5px;
+}
+footer {
+	padding: 10px;
+}
+h1 {
+	font-size: 3em;
+	font-family: BungeeShade;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

@@ -2,62 +2,118 @@
 <!--
 Created by: Eric Redlak
 Date:12/29/2020
-Most recent revision:
-
+Most recent revision:1/4/2021
 -->
 
 <html lang="en">
 	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Simmer Down - Menu</title>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>		
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />			
+		<style>
+			.lastTable {
+				padding-bottom:20px;
+			}
+			.row {
+				background-color:#eddfbf;
+			}
+			table {
+				background-color: #eddfbf;
+				border:0;
+				text-align:center;
+				margin:0 auto;
+			}
+			th {
+				font-size: 1.3em;
+				padding:5px;
+			}	
+			caption {
+				margin: 10px 10px 10px 10px;
+				font-size:1.3em;
+				font-weight:bold;
+			}
+		</style>
 	</head>
 	
-
-
 	<body>
-		<header>
-			Our Menu<!-- is there any way to make this a variable?-->
-			<hr/>
-			<h1 style="text-align:center">Simmer Down</h1>
-		</header>
-		<nav style="text-align:center">
-			<hr/>
-			<a href="index.html">Home</a>
-			<a href="menu.html">Menu</a>
-			<a href="contact.html">Contact Us</a>
-			<hr/>
-		</nav>
+		<br>
+		<div class="container">
+			<header class="jumbotron">
+				<h1>Simmer Down</h1>
+				<h6>We've been so busy we're boiling over!<br>Opening soon:<br>224 River Bend, Savannah, GA 31404</h6>			
+			</header>
+			<nav>
+				<!--Is there any way to force an SVG to have a different color?-->
+				<a href="index.html" class="btn btn-pill btn-secondary"><img src="open-iconic-master/svg/home.svg" alt="Home" id="homeIcon"></a>
+				<a href="menu.html" class="btn btn-pill btn-secondary">Menu</a>
+				<a href="contact.html" class="btn btn-pill btn-secondary">Contact Us</a>
+			</nav>
 
-		<section style="text-align:center ; vertical-align:top">   <!-- FIX VERTICAL ALIGNMENT ISSUES IN TABLE FOR CONSISTENCY-->
+			<section id="information">   <!-- FIX VERTICAL ALIGNMENT ISSUES IN TABLE FOR CONSISTENCY-->
+			<!-- Honestly, I thought the tables were layed out so that screen readers had an easier time, but wouldn't organizing tables with bootstrap lose that benefit?-->
+				<br>
+				<h3>Food</h3>
+				<div class="row">
+					<div class="col-lg col-md col-sm">
+							<div class="row tableHeader">Burgers and Fries</div>
+							<div class="row">An American Classic!<br>Your choice - with or without cheese<br>Pickle, onion, tomato, and lettuce<br>Served with our famous<br>Thick Cut French Fries<br>7.95</div>
+					</div>
+					<div class="col-lg col-md col-sm">
+							<div class="row tableHeader">Hot Dogs and Chips</div>
+							<div class="row">A Summer Classic!<br>You choice - white or wheat bun<br>Relish, mustard, and ketchup<br>Served with our house-made chips<br>7.95 </div>
+					</div>
+					<div class="col-lg col-md col-sm">
+							<div class="row tableHeader">Italian Sausage and Peppers</div>
+							<div class="row">An All-Time Favorite!<br>Your choice - mild or spicy Cole Slaw<br>Served with garlic mashers<br>10.95</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg col-md col-sm">
+							<div class="row tableHeader">Tenderlion Sandwich and Chips</div>
+							<div class="row">Really Hits the Spot!<br>Plain of Sesame Seed Bun<br>Pickle, onion, tomato, and lettuce<br>Served with our house-made chips<br>8.95</div>
+					</div>
+					<div class="col-lg col-md col-sm">
+							<div class="row tableHeader">House Salad</div>
+							<div class="row">On the Lighter Side<br>You choice - with or without cheese<br>Iceberg Lettuce, tomatoes, peppers<br>Thousand Island or Ranch Dressing<br>Served with a dinner roll<br>6.95 </div>
+					</div>
+					<div class="col-lg col-md col-sm">
+							<div class="row tableHeader">Brisket Sandwich and Fries</div>
+							<div class="row">A Taste of Texas!<br>Smoked Brisket on thick-cut<br>Texas Toast<br>Cole Slaw<br>Served with our famous thick-cut<br>french fries<br>7.95</div>
+					</div>
+				</div>
+				<br><br>
+				<h3>Drinks</h3>
+				<div class="row lastTable">
+					<div class="col-lg col-md col-sm">
+							<div class="row tableHeader">Root Beer</div>
+							<div class="row">3.00</div>
+					</div>
+					<div class="col-lg col-md col-sm">
+							<div class="row tableHeader">Bottled Water</div>
+							<div class="row">1.25</div>
+					</div>
+					<div class="col-lg col-md col-sm">
+							<div class="row tableHeader">Lemonade</div>
+							<div class="row">1.00</div>
+					</div>
+					<div class="col-lg col-md col-sm">
+							<div class="row tableHeader">Iced Tea</div>
+							<div class="row">1.25</div>
+					</div>
+			</section>
 
-			<table border="0" style="text-align:center" align="center">
-					<tr>
-						<th> Burgers and Fries </th>
-						<th> Hot Dogs and Chips </th>
-						<th> Italian Sausage and Peppers </th>
-					</tr>
-					<tr>
-						<td> An American Classic!<br>Your choice - with or without cheese<br>Pickle, onion, tomato, and lettuce<br>Served with our famous<br>Thick Cut French Fries<br>7.95</td>
-						<td> A Summer Classic!<br>You choice - white or wheat bun<br>Relish, mustard, and ketchup<br>Served with our house-made chips<br>7.95 </td>
-						<td> An All-Time Favorite!<br>Your choice - mild or spicy Cole Slaw<br>Served with garlic mashers<br>10.95</td>
-					</tr>
-					<tr>
-						<th> Tenderlion Sandwich and Chips </th>
-						<th> House Salad </th>
-						<th> Brisket Sandwich and Fries</th>
-					</tr>
-					<tr>
-						<td> Really Hits the Spot!<br>Plain of Sesame Seed Bun<br>Pickle, onion, tomato, and lettuce<br>Served with our house-made chips<br>8.95</td>
-						<td> On the Lighter Side<br>You choice - with or without cheese<br>Iceberg Lettuce, tomatoes, peppers<br>Thousand Island or Ranch Dressing<br>Served with a dinner roll<br>6.95 </td>
-						<td> A Taste of Texas!<br>Smoked Brisket on thick-cut<br>Texas Toast<br>Cole Slaw<br>Served with our famous thick-cut<br>french fries<br>7.95</td>
-					</tr>
-				<table>
-		</section>
-
-		<footer style="text-align:center">
-			<hr/>	
-			<p> 789 Burnt Ends Dr, North Charleston, SC 29404
+			<footer>
+			<p>789 Burnt Ends Dr, North Charleston, SC 29404</p>
 			<p>803-674-4000</p>
 			<p>&copy; 2020 Eric Redlak. All rights reserved.</p>
 		</footer>
+		</div>
+		<!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	</body>
 </html>
