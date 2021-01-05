@@ -21,5 +21,5 @@ function validateForm(){
 		alert("Your phone number cannot be blank");
 		return
 	};
-	alert("All of your information was accepted! Thank you.");
+	alert("You filled in all of the fields!");
 }
